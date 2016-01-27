@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import path from 'path';
 
 export default {
   context: __dirname + '/app/scripts',
@@ -24,6 +25,9 @@ export default {
     }),
   ],
   resolve: {
+    alias: {
+      'react': path.join(__dirname, 'node_modules', 'react')
+    },
     modulesDirectories: ['web_modules', 'node_modules', 'app/scripts', 'app/styles'],
   },
   module: {

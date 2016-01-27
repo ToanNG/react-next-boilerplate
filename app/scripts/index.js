@@ -6,12 +6,15 @@ import { Route, Link } from 'react-router';
 import { createDevTools } from 'redux-devtools';
 import LogMonitor from 'redux-devtools-log-monitor';
 import DockMonitor from 'redux-devtools-dock-monitor';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from 'containers/App';
 import Home from 'containers/Home';
 import Channel from 'containers/Channel';
 import configureStore from 'store/configureStore';
 import 'loaders.css/loaders.min.css';
 import 'app.css';
+
+injectTapEventPlugin();
 
 const dest = document.getElementById('root');
 const store = configureStore();
